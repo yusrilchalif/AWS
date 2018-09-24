@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#ff6600" />
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+
+  <title>Yusril Chalif A | MWS</title>
+
+  <style>   
+
+  body {
+	  background-color: #fafafa;
+	  -moz-transition: all 0.5s;
+	  -o-transition: all 0.5s;
+	  -webkit-transition: all 0.5s;
+	  transition: all 0.5s;
+	  font-family: 'Roboto'; }
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  font-weight: bold; }
+
+	button,
+	input,
+	select,
+	a {
+	  outline: none !important; 
+
+	}
+
+
+	.container {      
+	  	display: inline-grid;   
+	  	width: 100%;   
+	  	/*justify-items: center;*/
+       /*align-items: center; */
+	  	/*grid-template-columns:  100px 100px 100px 100px; */
+	  	/*grid-template-columns:  1fr 1fr 1fr 1fr;*/
+		grid-template-columns: repeat(4, 1fr);
+	  	grid-template-rows: 40px 100px 100px 100px 100px 30px;      
+	  	grid-gap: 2px; 
+
+
+
+	  }   
+
+	.menu {      
+		background: #29434e;      
+		grid-column-start: 1;  
+		grid-column-end: 5;   
+		display: flex;
+  		align-items: center;
+		justify-content: left;
+	} 
+	.menu profil{
+		background: #29434e;
+		grid-column-start: 2;
+		grid-column-end: 5;
+		display: flex;
+		align-items: center;
+		justify-content: left;
+	}
+
+	.menu span{
+		vertical-align: 
+	}  
+
+	.sidebar {      
+		background: #29434e;      
+		display: flex;
+		grid-row-start: 2;      
+		grid-row-end: 6;      
+		grid-column-end: 1/2;  
+		overflow: auto;
+		/*align-items: center;*/
+		justify-content: center;
+	}   
+
+	.konten {  
+	    display: flex;    
+		background: mediumspringgreen;
+		grid-column: 2/5; 
+		align-items: center;
+		justify-content: left;  
+	}   
+
+	.item1{
+		background: #e55039;
+	}
+
+	.item2{
+		background: #079992;
+	}
+
+	.item3{
+		background: #b71540;
+	}
+
+	.item4{
+		background: #fa983a;
+	}
+
+	.konten span{
+		/*text-align: center;*/
+		margin-right: 20px;
+		color: #fff;
+		font-weight: 300;
+	}
+
+	.footer {  
+	    display: flex;    
+		background: orangered;      
+		grid-column: 1/6;      
+		grid-row : 6/6;  
+		vertical-align: middle;
+		align-items: center;
+		justify-content: center; 
+		color: white;
+	} 
+
+	.icon-img{
+		width: 30px;
+		margin-left: 10px;
+		margin-right: 5px;
+		height: 30px;
+		align-self: center;
+		color: white;
+	}
+   
+	.img-apps{
+		width: 80px;
+		margin-right:  20px;
+		margin-left:  20px;
+		height: 80px;
+		align-self: center;
+		border-radius: 50%;
+    object-fit: cover;
+		
+	}
+
+	a:link{
+		text-decoration:none;
+	}
+    
+    .menu a{
+    	color: white;
+    	margin-right: 10px;
+    	vertical-align: middle;
+    	display: flex;
+    	align-items: center;
+    	justify-content: left;
+
+	}
+	. menu Profil a{
+		color:#fafafa;
+		margin-right: 25px;
+		vertical-align: middle;
+		display: flex;
+		align-items: center;
+		justify-content: left
+	}
+
+    .footer a{
+    	color: #fff;
+    }
+
+    .konten a{
+    	color: white;
+    	margin-right: 10px;
+    	vertical-align: middle;
+    	display: flex;
+    	align-items: center;
+    	justify-content: left;
+
+    }
+
+	.img-profil{
+	display: flex;
+	margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    color: white;
+	}
+
+	@media (max-width: 480px) and (max-width: 700px){
+		.img-profil{
+    max-height: 70px;
+    max-width: 70px;
+	}
+	
+	.img-apps{
+		max-height: 70px;
+		max-width: 70px;
+	}
+
+	.page-title {
+	  font-size: 11px;
+	}
+
+	.footer{
+		font-size: 12px;
+	}
+}
+
+	.small{
+		font-size: 12px;
+	}
+
+	.page-title {
+	  padding-top: 2px;
+	  text-transform: capitalize;
+	  text-align: center;
+	  font-weight: 300;
+	  color: #fafafa;
+	}
+</style> 
+</head>
+<body class="body">
+	<div class="container">
+	 	<div class='menu'>
+			 <a href="index.html"><img class="icon-img" src="https://png.icons8.com/doodle/50/000000/home.png"><span>Home</span></a>
+			 <div class = 'menu-profil'>
+				<a href="profil.html"><img class="icon-img" src="https://png.icons8.com/clouds/40/000000/gender-neutral-user.png"><span>Profil</span></a>
+			 </div>
+	 	</div>
+	    <div class='sidebar'>
+	    	<div><img width="200" height="200" class="img-profil" src="img/img.jpg">
+	    	<p class="page-title">
+	    		Mobile Web Specialist <br> Google Developer kejar Batch 1<br>
+	    	 Surabaya, Indonesia</p>
+	    	</div>
+	    	</div>
+	    <div class='konten'>
+	    	<a href="calc.html"><img class="img-apps" src="https://png.icons8.com/doodle/50/000000/calculator.png"><span><b> Project 1:</b><br>Menjumlahkan 2 angka</span>
+	    	</a>
+	    </div>
+	    <div class='konten'>
+	    	<a href="maps.html"><img class="img-apps" src="https://png.icons8.com/office/40/000000/worldwide-location.png"><span><b> Project 2:</b><br>Lokasi dengan MapBox</span>
+	    	</a>
+	    </div>
+	    <div class='konten'>
+	    	<a href="#">
+	    		<img class="img-apps" src="https://image.flaticon.com/icons/png/512/1072/1072368.png"><span><b> Project 3:</b><br>Mobile Map - LeafBox</span>
+	    	</a>
+	    	</div>
+	    <div class='konten'><img class="img-apps" src="#"><span><b> Project 4:</b><br> Tunggu Tugas?</span></div>
+	    <div class='footer'><p>&copy; 2018. <a href="https://www.linkedin.com/in/yusril-chalif-906398169/">Yusril Chalif A</a></p></div> 
+	</div> 
+
+
+</body>
+</html>

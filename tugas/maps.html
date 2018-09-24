@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ff6600" />
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	
+
+    <title>Yusril Chalif A | Maps</title>
+
+    <style>
+
+        body {
+	  background-color: #fafafa;
+	  -moz-transition: all 0.5s;
+	  -o-transition: all 0.5s;
+	  -webkit-transition: all 0.5s;
+	  transition: all 0.5s;
+	  font-family: 'Roboto'; }
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  font-weight: bold; }
+
+	button,
+	input,
+	select,
+	a {
+	  outline: none !important; 
+
+	}
+	#mapid{
+		display: flex;    
+		grid-column: 2/5; 
+		align-items: center;
+		justify-content: center; 
+	}
+
+    .big{
+    	font-size: x-large;
+    }
+
+    
+    input[type=text], select, textarea {
+     max-width: 500px;
+     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	}
+
+    input[type=text]:focus {
+        background-color: rgba(0,0,0,0.45);
+        color: #fff;
+   }
+
+
+
+    .button1 {background-color: #4CAF50; color: #fff} 
+	.button2 {background-color: #008CBA; color: #fff} 
+	.button3 {background-color: #f44336; color: #fff} 
+	.button4 {background-color: #e7e7e7; color: black;}  
+	.button5 {background-color: #555555; color: #fff} 
+
+	.container {      
+	  	display: inline-grid;   
+	  	width: 100%;   
+		grid-template-columns: repeat(4, 1fr);
+	  	grid-template-rows: 30px 300px 30px;      
+	  	grid-gap: 2px; 
+
+
+
+	  }   
+
+	.menu {      
+		background: #29434e;      
+		grid-column-start: 1;  
+		grid-column-end: 5;   
+		display: flex;
+  		align-items: center;
+		justify-content: left;
+	} 
+
+	.menu span{
+		vertical-align: 
+	}  
+
+	.sidebar {      
+		background: #29434e;      
+		display: flex;
+		grid-row-start: 2;      
+		grid-row-end: 3;      
+		grid-column-end: 1/2;  
+		overflow: auto;
+		justify-content: center;
+	}   
+
+	.konten {  
+	    display: flex;    
+		grid-column: 2/5; 
+		align-items: center;
+		justify-content: center;  
+	}   
+
+	.item1{
+		background: #e55039;
+	}
+
+	.item2{
+		background: #079992;
+	}
+
+	.item3{
+		background: #b71540;
+	}
+
+	.item4{
+		background: #fa983a;
+	}
+
+	.konten span{
+		margin-right: 20px;
+		color: #fff;
+		font-weight: 300;
+	}
+
+	.footer {  
+	    display: flex;    
+		background: orangered;      
+		grid-column: 1/5;      
+		grid-row : 3/3;  
+		vertical-align: middle;
+		align-items: center;
+		justify-content: center; 
+		color: white;
+	} 
+
+	.icon-img{
+		width: 30px;
+		margin-left: 10px;
+		margin-right: 5px;
+		height: 30px;
+		align-self: center;
+		color: white;
+	}
+   
+	.img-apps{
+		width: 80px;
+		margin-right:  20px;
+		margin-left:  20px;
+		height: 80px;
+		align-self: center;
+		border-radius: 50%;
+    object-fit: cover;
+		
+	}
+
+	a:link{
+		text-decoration:none;
+	}
+    
+    .menu a{
+    	color: white;
+    	margin-right: 10px;
+    	vertical-align: middle;
+    	display: flex;
+    	align-items: center;
+    	justify-content: left;
+
+    }
+
+    .footer a{
+    	color: #fff;
+    }
+
+    .konten a{
+    	color: white;
+    	margin-right: 10px;
+    	vertical-align: middle;
+    	display: flex;
+    	align-items: center;
+    	justify-content: left;
+    }
+
+	.img-profil{
+	display: flex;
+	margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    color: white;
+	}
+
+	@media (max-width: 480px) and (max-width: 700px){
+		.img-profil{
+    max-height: 70px;
+    max-width: 70px;
+	}
+	
+	.img-apps{
+		max-height: 70px;
+		max-width: 70px;
+	}
+
+	.page-title {
+	  font-size: 11px;
+	}
+
+	.footer{
+		font-size: 12px;
+	}
+}
+
+	.small{
+		font-size: 12px;
+	}
+
+	.page-title {
+	  padding-top: 2px;
+	  text-transform: capitalize;
+	  text-align: center;
+	  font-weight: 300;
+	  color: #fafafa;
+	}
+</style>
+</head>
+<body class="body">
+    <div class="container">
+        <div class='menu'>
+            <a href="index.html"> <img class="icon-img" src="https://png.icons8.com/doodle/50/000000/home.png"><span>Home</span></a>
+            <div class='menu-profil'>
+                <a href="profil.html"><img class="icon-img" src="https://png.icons8.com/clouds/40/000000/gender-neutral-user.png"><span>Profil</span></a>
+            </div>
+        </div>
+        <div class='sidebar'>
+            <div><img width="200" height="200" class="img-profil" src="https://png.icons8.com/office/40/000000/worldwide-location.png">
+                <p class="page-title">
+                    Simple Map</p>
+            </div>
+        </div>
+        <div class='konten item1'>
+            <div id = "mapId">
+				<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+				<script>
+					var mymap = L.map('mapId').setView([-7.276329, 112.793879], 15);
+					L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token = { accessToken }', {
+					attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href = "https://creativecommons.org/licenses/by-sa/2.0/" > CC - BY - SA</a >,Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+					maxZoom: 18, id: 'mapbox.streets', accessToken: 'pk.eyJ1IjoieXVzcmlsNTUxMyIsImEiOiJjam1lb2k0dTAwbzNoM3JwM3ZyZnU4NzQ2In0.8fwuXMcpOmXbUDEncbZgJA'
+					}).addTo(mymap);
+
+					var marker = L.marker([-7.276329, 112.793879]).addTo(mymap);
+					var circle = L.circle([-7.276329, 112.793879], {
+						color: 'red',
+						fillColor: '#000',
+						fillOpacity: '0.5',
+						radius: 200
+					}).addTo(mymap);
+				</script>
+			</div>
+        </div>
+        <div class='footer'>
+            <p>&copy; 2018. <a href="https://www.linkedin.com/in/yusril-chalif-906398169/">Yusril Chalif A</a></p>
+        </div>
+    </div>
+	<!-- /*javaScript*/ -->
+	
+</body>
+
+</html>
